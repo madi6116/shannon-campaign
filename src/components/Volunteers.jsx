@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import madison from '../assets/madi.jpg';
 import melanie from '../assets/mel.jpg';
+import kara from '../assets/kara.png';
 import './Volunteers.css';
 
 const volunteers = [
@@ -18,6 +19,13 @@ const volunteers = [
     linkedin: 'https://linkedin.com/in/melanie-regalado-hernandez', 
     color: 'var(--bd)',
   },
+  {
+    name: 'Kara Gonzales',
+    title: 'Chief Grahpic Designer',
+    photo: kara,
+    linkedin: 'https://www.linkedin.com/in/kara-gonzales-85837029b/',
+    color: 'var(--rd)',
+  }
 ];
 
 export default function Volunteers() {
