@@ -49,4 +49,4 @@ src/
 
 ## Contact
 
-Instagram: [@shannonforasvp](https://instagram.com)
+Instagram: [@sshannon.lo](https://instagram.com/sshannon.lo)
