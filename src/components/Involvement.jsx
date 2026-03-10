@@ -20,7 +20,6 @@ const items = [
   ///{ image: swe1,     org: 'Society of Women Engineers',  roles: ['Alumni Relations Committee Chair', 'Mentorship Committee Chair', 'SWE++ Program Volunteer'] },
   //{ image: swe2,     org: 'Society of Women Engineers',  roles: ['Alumni Relations Committee Chair', 'Mentorship Committee Chair', 'SWE++ Program Volunteer'] },
   //{ image: swe3,     org: 'Society of Women Engineers',  roles: ['Alumni Relations Committee Chair', 'Mentorship Committee Chair', 'SWE++ Program Volunteer'] },
-  { image: img4363,  org: 'CAPISE',                      roles: ['Asian Pacific Islander Empower Mentor'] },
   { image: spartan,  org: 'Spartan Racing Formula SAE',  roles: ['Business Team Intern'] },
   { image: spartan2, org: 'Spartan Racing Formula SAE',  roles: ['Business Team Intern'] },
 ];
