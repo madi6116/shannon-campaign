@@ -24,8 +24,8 @@ const BODY_HEIGHT = 300;
 
 export default function Priorities() {
   const [active, setActive] = useState(0);
-  const [submitted, setSubmitted] = useState(false);
   const [feedback, setFeedback] = useState('');
+  const [status, setStatus] = useState('idle');
 
   const totalCards = cards.length;
   const stackHeight = (totalCards * TAB_HEIGHT) + BODY_HEIGHT;
@@ -44,8 +44,14 @@ export default function Priorities() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!feedback.trim()) return;
-    setSubmitted(true);
-    setFeedback('');
+    setStatus('sending');
+    const url = `https://docs.google.com/forms/d/e/1FAIpQLScR_tYDr6dbhZoXNQ58cQp9YEY-5uFoutn4CKDfiWZsWsJazA/formResponse?entry.1086156925=${encodeURIComponent(feedback)}&submit=Submit`;
+    fetch(url, { method: 'POST', mode: 'no-cors' })
+      .then(() => {
+        setStatus('success');
+        setFeedback('');
+      })
+      .catch(() => setStatus('error'));
   };
 
   return (
@@ -54,18 +60,12 @@ export default function Priorities() {
         <span className="section-label reveal">What I Stand For</span>
         <h2 className="section-title reveal d1">Focus &amp; Priorities</h2>
 
-        <div
-          className="pri-stack reveal d2"
-          style={{ height: `${stackHeight}px` }}
-        >
+        <div className="pri-stack reveal d2" style={{ height: `${stackHeight}px` }}>
           {cards.map((card, i) => (
             <div
               key={i}
               className={`pri-page ${active === i ? 'active' : ''}`}
-              style={{
-                transform: getTransform(i),
-                zIndex: getZ(i),
-              }}
+              style={{ transform: getTransform(i), zIndex: getZ(i) }}
             >
               <div className="pri-tab" onClick={() => setActive(i)}>
                 <span className="pri-tab-num">{card.num}</span>
@@ -81,13 +81,9 @@ export default function Priorities() {
 
         <div className="pri-feedback reveal d3">
           <h3 className="feedback-title">Share Your Feedback</h3>
-          <p className="feedback-sub">
-            What issues matter most to you? Shannon wants to hear from you.
-          </p>
-          {submitted ? (
-            <div className="feedback-thanks">
-              Thank you for your input! Shannon will take this to heart. 💚
-            </div>
+          <p className="feedback-sub">What issues matter most to you? Shannon wants to hear from you.</p>
+          {status === 'success' ? (
+            <div className="feedback-thanks">Thank you for your input! Shannon will take this to heart. 💚</div>
           ) : (
             <form className="feedback-form" onSubmit={handleSubmit}>
               <textarea
@@ -97,8 +93,11 @@ export default function Priorities() {
                 value={feedback}
                 onChange={(e) => setFeedback(e.target.value)}
               />
-              <button type="submit" className="btn-primary feedback-submit">
-                Send Feedback
+              {status === 'error' && (
+                <p className="feedback-error">Something went wrong. Please try again.</p>
+              )}
+              <button type="submit" className="btn-primary feedback-submit" disabled={status === 'sending'}>
+                {status === 'sending' ? 'Sending…' : 'Send Feedback'}
               </button>
             </form>
           )}
