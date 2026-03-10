@@ -1,0 +1,69 @@
+:root {
+  --gd: #1a5c3a;
+  --gm: #2d8a57;
+  --gl: #a8d5b5;
+  --gp: #d6eedf;
+  --bd: #1a4a7a;
+  --bm: #3a7bc8;
+  --bl: #a8c8e8;
+  --bp: #d6e8f5;
+  --ow: #f4faf6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--ow);
+  color: #1a2e1f;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 6rem 2rem;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--bm);
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--gd);
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal.d1 { transition-delay: 0.1s; }
+.reveal.d2 { transition-delay: 0.2s; }
+.reveal.d3 { transition-delay: 0.3s; }

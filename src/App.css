@@ -1,0 +1,99 @@
+:root {
+  --gd: #1a5c3a;
+  --gm: #2d8a57;
+  --gl: #a8d5b5;
+  --gp: #d6eedf;
+  --bd: #1a4a7a;
+  --bm: #3a7bc8;
+  --bl: #a8c8e8;
+  --bp: #d6e8f5;
+  --ow: #f4faf6;
+  --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--ow);
+  color: #1a2e1f;
+  overflow-x: hidden;
+}
+
+.app { position: relative; }
+
+/* ── Shared ── */
+.section-label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--bm);
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  color: var(--gd);
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Reveal animation ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
+.reveal.d1 { transition-delay: 0.12s; }
+.reveal.d2 { transition-delay: 0.24s; }
+.reveal.d3 { transition-delay: 0.36s; }
+.reveal.d4 { transition-delay: 0.48s; }
+
+/* ── Shared buttons ── */
+.btn-primary {
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  background: var(--gd);
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: all 0.3s;
+  border: 2px solid var(--gd);
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+}
+.btn-primary:hover { background: transparent; color: var(--gd); }
+
+.btn-outline {
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  border: 2px solid var(--bm);
+  color: var(--bm);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: all 0.3s;
+  background: rgba(255,255,255,0.6);
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+}
+.btn-outline:hover { background: var(--bm); color: white; }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: var(--gl); border-radius: 3px; }

@@ -1,0 +1,118 @@
+.letstalk-section {
+  background: linear-gradient(135deg, var(--gd) 0%, var(--bd) 100%);
+  padding: 8rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* Subtle watermark */
+.letstalk-section::before {
+  content: 'Shannon';
+  font-family: 'Great Vibes', cursive;
+  font-size: 28rem;
+  color: rgba(255,255,255,0.03);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.letstalk-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.lt-label { color: var(--gl) !important; }
+
+.lt-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(4rem, 10vw, 7rem);
+  color: white;
+  line-height: 1;
+  margin-bottom: 1.2rem;
+}
+
+.lt-sub {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lt-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+}
+
+.lt-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 2rem;
+  border-radius: 16px;
+  text-decoration: none;
+  background: rgba(255,255,255,0.1);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  transition: all 0.3s;
+  min-width: 260px;
+}
+
+.lt-link:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.45);
+  transform: translateY(-3px);
+}
+
+.lt-link-icon {
+  font-size: 1.5rem;
+  color: var(--gl);
+  line-height: 1;
+}
+
+.lt-link-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.15rem;
+}
+
+.lt-link-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.55);
+  font-weight: 500;
+}
+
+.lt-link-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.01em;
+}
+
+.lt-footer-logo {
+  width: 260px;
+  height: auto;
+  opacity: 0.45;
+  filter: brightness(0) invert(1);
+}
+
+.lt-footer-sub {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
