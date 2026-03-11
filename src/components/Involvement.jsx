@@ -11,8 +11,8 @@ const items = [
   { image: dsc1,     text: 'Responsible Computing Club', roles: ['Mozilla & Firefox Ambassador', 'VP of External Affairs', 'Community Engagement Lead'] },
   { image: dsc2,     text: 'Responsible Computing Club', roles: ['Mozilla & Firefox Ambassador', 'VP of External Affairs', 'Community Engagement Lead'] },
   { image: dsc3,     text: 'Responsible Computing Club', roles: ['Mozilla & Firefox Ambassador', 'VP of External Affairs', 'Community Engagement Lead'] },
-  { image: spartan,  text: 'Spartan Racing Formula SAE',  roles: ['Business Team Intern'] },
-  { image: spartan2, text: 'Spartan Racing Formula SAE',  roles: ['Business Team Intern'] },
+  { image: spartan,  text: 'Spartan Racing Formula SAE', roles: ['Business Team Intern'] },
+  { image: spartan2, text: 'Spartan Racing Formula SAE', roles: ['Business Team Intern'] },
 ];
 
 export default function Involvement() {
@@ -46,7 +46,7 @@ export default function Involvement() {
         <CircularGallery
           items={items}
           bend={3}
-          textColor="#ffffff"
+          textColor="#2d8a57"
           borderRadius={0.05}
           scrollSpeed={2}
         />

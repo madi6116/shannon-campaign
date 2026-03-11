@@ -22,6 +22,11 @@
   color: white;
   margin-bottom: 0.4rem;
 }
+.circular-gallery {
+  width: 100%;
+  height: 500px;
+  margin-top: 2rem;
+}
 
 .gallery-tooltip-roles {
   list-style: none;
