@@ -7,24 +7,26 @@ import './Volunteers.css';
 const volunteers = [
   {
     name: 'Madison Ammirati',
-    title: 'Chief Technology Officer', 
+    title: 'Chief Technology Officer',
     photo: madison,
-    linkedin: 'https://linkedin.com/in/madison-ammirati', 
+    linkedin: 'https://linkedin.com/in/madison-ammirati',
     color: 'var(--gd)',
   },
   {
     name: 'Melanie Regalado Hernandez',
-    title: 'Chief Marketing Officer',   
+    title: 'Chief Marketing Officer',
     photo: melanie,
-    linkedin: 'https://linkedin.com/in/melanie-regalado-hernandez', 
+    linkedin: 'https://linkedin.com/in/melanie-regalado-hernandez',
     color: 'var(--bd)',
   },
   {
     name: 'Kara Gonzales',
-    title: 'Chief Grahpic Designer',
+    title: 'Chief Graphic Designer',
     photo: kara,
     linkedin: 'https://www.linkedin.com/in/kara-gonzales-85837029b/',
     color: 'var(--rd)',
+    objectPosition: 'center 20%',
+    scale: 1.5,
   }
 ];
 
@@ -49,7 +51,7 @@ function VolBubble({ v, delay }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <a
+      <a
       href={v.linkedin}
       target="_blank"
       rel="noopener noreferrer"
@@ -58,16 +60,23 @@ function VolBubble({ v, delay }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* Photo circle */}
       <div className="vol-photo-wrap">
-        <img src={v.photo} alt={v.name} className="vol-photo" />
+        <img
+          src={v.photo}
+          alt={v.name}
+          className="vol-photo"
+          style={{
+            objectFit: v.objectFit || 'cover',
+            objectPosition: v.objectPosition || 'center',
+            transform: v.scale ? `scale(${v.scale})` : 'none',
+          }}
+        />
         <div className="vol-overlay">
           <span className="vol-linkedin-icon">in</span>
           <span className="vol-connect">View LinkedIn</span>
         </div>
       </div>
 
-      {/* Info below bubble */}
       <div className="vol-info">
         <div className="vol-name">{v.name}</div>
         <div className="vol-title">{v.title}</div>

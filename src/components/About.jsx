@@ -18,15 +18,13 @@ export default function About() {
             <h2 className="section-title reveal d1">Hello, I'm Shannon</h2>
 
             <p className="reveal d1">
-              As a third-year Taiwanese international student at SJSU, majoring in Data Science
-              and minoring in Interdisciplinary Humanities, I'm dedicated to listening to the
-              voices of our students and making sure this reflects in the agendas of our meetings.
+              As a third-year Taiwanese international student at SJSU, majoring in Data Science and minoring in Interdisciplinary Humanities, I’m dedicated to listening to the voices of our students and making sure that this reflects in the agendas of the meetings.
             </p>
 
             <p className="reveal d2">
-              Being involved on campus has allowed me to deeply understand the problems that need
-              to be addressed — impacting our diverse student body. There is still more for me to
-              learn, and I want to implement that positive change on our campus.
+              Being involved on campus has allowed me to deeply understand the problems that need to be addressed on our campus which impact our diverse student body, but there is still more for me to learn, and I want to implement that positive change on our campus. 
+
+
             </p>
 
             <div className="about-stats reveal d3">

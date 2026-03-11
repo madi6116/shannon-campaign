@@ -24,26 +24,7 @@
   position: relative;
 }
 
-/* ── Spinning ring ── */
-.vol-ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 220px;
-  height: 220px;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: transform 0.4s ease;
-}
 
-.vol-ring.spinning {
-  animation: spinRing 6s linear infinite;
-}
-
-@keyframes spinRing {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to   { transform: translate(-50%, -50%) rotate(360deg); }
-}
 
 .vol-ring-svg {
   width: 100%;

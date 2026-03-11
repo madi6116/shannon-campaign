@@ -16,7 +16,7 @@ import './Involvement.css';
 const items = [
   { image: dsc1,     org: 'Responsible Computing Club', roles: ['Mozilla & Firefox Ambassador', 'VP of External Affairs', 'Community Engagement Lead'] },
   { image: dsc2,     org: 'Responsible Computing Club', roles: ['Mozilla & Firefox Ambassador', 'VP of External Affairs', 'Community Engagement Lead'] },
-  { image: dsc3,     org: 'Responsible Computing Club', roles: ['Mozilla & Firefox Ambassador', 'VP of External Affairs', 'Community Engagement Lead'] },
+  { image: dsc3, org: 'Responsible Computing Club', roles: ['Mozilla & Firefox Ambassador', 'VP of External Affairs', 'Community Engagement Lead'], objectPosition: 'center  80%' },
   ///{ image: swe1,     org: 'Society of Women Engineers',  roles: ['Alumni Relations Committee Chair', 'Mentorship Committee Chair', 'SWE++ Program Volunteer'] },
   //{ image: swe2,     org: 'Society of Women Engineers',  roles: ['Alumni Relations Committee Chair', 'Mentorship Committee Chair', 'SWE++ Program Volunteer'] },
   //{ image: swe3,     org: 'Society of Women Engineers',  roles: ['Alumni Relations Committee Chair', 'Mentorship Committee Chair', 'SWE++ Program Volunteer'] },

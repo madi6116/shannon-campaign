@@ -9,16 +9,18 @@
 
 /* Subtle watermark */
 .letstalk-section::before {
-  content: 'Shannon';
-  font-family: 'Great Vibes', cursive;
-  font-size: 28rem;
-  color: rgba(255,255,255,0.03);
+  content: '';
+  width: min(1200vw, 2000px);
+  height: min(1200vh, 2000px);
+  aspect-ratio: 1 / 1;
+  background: url('../assets/logo.png') center / contain no-repeat;
+  opacity: 0.025;
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  white-space: nowrap;
+  z-index: 0;
 }
 
 .letstalk-inner {
@@ -31,7 +33,7 @@
 .lt-label { color: var(--gl) !important; }
 
 .lt-title {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(4rem, 10vw, 7rem);
   color: white;
   line-height: 1;

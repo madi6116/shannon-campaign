@@ -32,7 +32,11 @@ export default function CircularGallery({ items }) {
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >
-          <img src={item.image} alt={item.org} />
+          <img
+            src={item.image}
+            alt={item.org}
+            style={{ objectFit: 'cover', objectPosition: item.objectPosition || 'center' }}
+          />
           <div className={`cg-overlay ${hovered ? 'visible' : ''}`}>
             <div className="cg-org">{item.org}</div>
             <div className="cg-divider" />
