@@ -40,7 +40,7 @@ export default function LetsTalk() {
 
         <img src={logo} alt="Shannon" className="lt-footer-logo" />
         <p className="lt-footer-sub">
-          For A.S. Vice President · SJSU Associated Students · 2026–2027
+          VICE PRESIDENT CANDIDATE FOR ASSOCIATED STUDENTS BOARD OF DIRECTORS
         </p>
       </div>
     </section>
