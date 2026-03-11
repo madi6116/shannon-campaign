@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import latinx from '../assets/Latinx.png';
+import spartanRacing from '../assets/spartan-racing.png';
 import './Endorsements.css';
 
 const endorsements = [
   { name: 'Latinx in Tech', img: latinx },
+  { name: 'Spartan Racing', img: spartanRacing }
 ];
 
 export default function Endorsements() {
