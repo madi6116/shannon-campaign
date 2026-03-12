@@ -13,7 +13,6 @@
   margin-bottom: 1rem;
 }
 
-/* The floating arena */
 .end-arena {
   position: relative;
   width: 100%;
@@ -35,9 +34,9 @@
   white-space: nowrap;
   transition: box-shadow 0.3s, transform 0.2s;
   cursor: default;
-  /* initial fade-in */
   animation: bubblePop 0.5s ease both;
 }
+
 .end-img {
   width: 100px;
   height: 100px;
@@ -45,6 +44,7 @@
   border-radius: 50%;
   margin-bottom: 0.4rem;
 }
+
 .end-bubble:hover {
   box-shadow: 0 12px 36px rgba(26,92,58,0.18);
   transform: translate(-50%, -50%) scale(1.07);
@@ -64,8 +64,45 @@
   color: #1a2e1f;
 }
 
+/* ── Mobile: switch to static grid ── */
 @media (max-width: 768px) {
-  .end-arena { height: 420px; }
-  .end-bubble { padding: 0.7rem 1.1rem; }
-  .end-name { font-size: 0.75rem; }
+  .end-arena {
+    height: auto;
+    overflow: visible;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0 2rem;
+  }
+
+  .end-bubble {
+    position: static;
+    transform: none !important;
+    animation: bubblePopMobile 0.5s ease both;
+    flex-direction: column;
+    text-align: center;
+    padding: 1.2rem 1.4rem;
+    border-radius: 20px;
+    min-width: 130px;
+  }
+
+  .end-bubble:hover {
+    transform: scale(1.05) !important;
+  }
+
+  .end-img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 0.5rem;
+  }
+
+  .end-name {
+    font-size: 0.8rem;
+  }
+
+  @keyframes bubblePopMobile {
+    from { opacity: 0; transform: scale(0.6); }
+    to   { opacity: 1; transform: scale(1); }
+  }
 }
