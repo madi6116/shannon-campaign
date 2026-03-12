@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import madison from '../assets/madi.jpg';
 import melanie from '../assets/mel.jpg';
 import kara from '../assets/kara.png';
+import ynha from '../assets/ynha.png';
 import './Volunteers.css';
 
 const volunteers = [
@@ -27,6 +28,13 @@ const volunteers = [
     color: 'var(--rd)',
     objectPosition: 'center 20%',
     scale: 1.5,
+  },
+  {
+    name: 'Ynha Nguyen',
+    title: 'Chief Brand Officer',
+    photo: ynha,
+    linkedin: 'https://www.linkedin.com/in/ynha-nguyen-74459a334/',
+    color: 'var(--gd)',
   }
 ];
 
