@@ -3,11 +3,13 @@ import latinx from '../assets/Latinx.png';
 import spartanRacing from '../assets/spartan-racing.png';
 import sase from '../assets/sase.png';
 import './Endorsements.css';
+import acm from '../assets/acm.png';
 
 const endorsements = [
   { name: 'Latinx in Tech', img: latinx },
   { name: 'Spartan Racing', img: spartanRacing },
-  { name: 'SASE', img: sase }
+  { name: 'SASE', img: sase },
+  { name: 'ACM', img: acm }
 ];
 
 export default function Endorsements() {
