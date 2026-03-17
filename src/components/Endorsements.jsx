@@ -4,12 +4,16 @@ import spartanRacing from '../assets/spartan-racing.png';
 import sase from '../assets/sase.png';
 import './Endorsements.css';
 import acm from '../assets/acm.png';
+import WIB from '../assets/WIB.png';
+import democrats from '../assets/democrats.png';
 
 const endorsements = [
   { name: 'Latinx in Tech', img: latinx },
   { name: 'Spartan Racing', img: spartanRacing },
   { name: 'SASE', img: sase },
-  { name: 'ACM', img: acm }
+  { name: 'ACM', img: acm },
+  { name: 'Women in Business', img: WIB },
+  { name: 'College Democrats at SJSU', img: democrats }
 ];
 
 export default function Endorsements() {
