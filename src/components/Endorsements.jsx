@@ -6,6 +6,7 @@ import './Endorsements.css';
 import acm from '../assets/acm.png';
 import WIB from '../assets/WIB.png';
 import democrats from '../assets/democrats.png';
+import ADS from '../assets/ADS.png';
 
 const endorsements = [
   { name: 'Latinx in Tech', img: latinx },
@@ -13,7 +14,8 @@ const endorsements = [
   { name: 'SASE', img: sase },
   { name: 'ACM', img: acm },
   { name: 'Women in Business', img: WIB },
-  { name: 'College Democrats at SJSU', img: democrats }
+  { name: 'College Democrats at SJSU', img: democrats },
+  { name: 'Art and Design Society', img: ADS },
 ];
 
 export default function Endorsements() {
