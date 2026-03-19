@@ -7,6 +7,7 @@ import acm from '../assets/acm.png';
 import WIB from '../assets/WIB.png';
 import democrats from '../assets/democrats.png';
 import ADS from '../assets/ADS.png';
+import Baja from '../assets/Baja.png';
 
 const endorsements = [
   { name: 'Latinx in Tech', img: latinx },
@@ -16,6 +17,7 @@ const endorsements = [
   { name: 'Women in Business', img: WIB },
   { name: 'College Democrats at SJSU', img: democrats },
   { name: 'Art and Design Society', img: ADS },
+  { name: 'Baja Spartan Racing', img: Baja },
 ];
 
 export default function Endorsements() {
